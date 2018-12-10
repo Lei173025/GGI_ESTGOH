@@ -1,7 +1,7 @@
 This is a test
 asd
 <<<<<<< HEAD
-ola 123
+ola 1234
 =======
 1
 2
