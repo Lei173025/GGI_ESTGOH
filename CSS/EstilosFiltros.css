@@ -1,0 +1,19 @@
+.form-filtro {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-filtro .form-group {
+  flex-grow: 1;
+  padding: 5px;
+  flex-basis: 10%;
+}
+
+.form-filtro .form-control {
+  width: 100%;
+}
+
+.form-filtro .form-nowrap {
+  white-space: nowrap;
+}

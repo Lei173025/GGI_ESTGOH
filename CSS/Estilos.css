@@ -1,0 +1,182 @@
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255);
+}
+.letras-invisiveis {
+    color: rgba(255, 0, 0, 0);
+}
+
+.form-signin{
+    background-color: rgb(0, 123, 255, 0.1);
+    border-radius: 20px;
+    max-width: 70%;
+    max-height: 385px;
+    padding: 5%;
+    text-align: center;
+    background-image: url("img/air-conditioning-for-server-rooms.png");
+    margin-top: 5%;
+}
+
+
+.form-signin .form-control {
+  margin: auto;
+  text-align: center;
+  width: 50%;
+}
+
+.btn-block {
+    display: block;
+    width: 150px;
+    margin: auto;
+}
+
+.h3{
+  color: white;
+}
+
+.corfooter{
+  color: #0775b8;
+}
+
+.list-inline-item{
+  margin: 10px 0px 0px 0px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px 0px 10px 0px;
+
+}
+
+p.copyright {
+  margin: 15px 0 0;
+}
+
+.divAzul {
+  color:#0775b8;
+}
+
+#sidebar-wrapper{
+  background-color: #007bff;
+}
+
+
+
+.sidebar-nav>.sidebar-brand a {
+    color: #fff;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nome{
+  color: #fff;
+}
+
+.detalhes-usr{
+  padding-top: 20px;
+}
+
+.detalhes-usr-img{
+  padding-left: 30%;
+  padding-bottom: 10px;
+}
+
+.n-e-estilo{
+  color: #fff;
+}
+
+.submenu{
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.submenu li{
+    line-height: 30px;
+}
+
+.Bandeiras-menu{
+  padding-top: 50px;
+  padding-left: 20%;
+}
+
+.footer {
+  position: fixed;
+      bottom: 2%;
+      width: 100%;
+}
+
+.gradiente-topo{
+  background-image: linear-gradient(to right,rgba(0, 70, 183, 1) , rgba(255,0,0,0));
+}
+
+#sidebar-wrapper{
+   background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(0, 70, 183, 1));
+}
+p.nome-sidebar{
+  line-height: 16px;
+}
+
+.margin-r-5{
+  margin-right: 5px;
+}
+
+.padding-4{
+  padding: 4%;
+}
+
+.blue-table-head{
+  background-color: #007bff;
+}
+
+.cor-white{
+  color: white;
+}
+
+td.row-tabelas{
+  padding-top: 0px;
+  padding-bottom: 0pc;
+  text-align: center;
+}
+
+td.row-lupa{
+  padding-top:5px;
+  padding-bottom:0px;
+  text-align:center;
+}
+
+.butao-procurar{
+float: right;
+margin-left:10px;
+}
+
+.input-procurar{
+  width: 20%;
+  float: right;
+}
+
+.center-imagem{
+  margin-bottom:30px;
+  text-align:center;
+}
+
+.message{
+  position: absolute;
+      top: 15%;
+      left: 2%;
+}
+
+.color-por-ver{
+  background: rgb(173, 173, 173,0.6);
+}
+
+.color-em-processamento{
+  background: rgb(214, 214, 38, 0.6);
+}
+
+.color-insucesso{
+  background: rgb(224, 11, 11, 0.5);
+}
+
+.color-sucesso{
+  background: rgb(0, 204, 44, 0.5);
+}
