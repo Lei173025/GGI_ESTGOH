@@ -53,9 +53,11 @@ $menuAluno="<div id='wrapper' class='toggled'>
       </li>
       <li>
         <a href='../Pedidos/GereConta.php'>".$lang_GerirConta."</a>
+        <a href='../Utilizadores/GereConta.php'>".$lang_GerirConta."</a>
       </li>
       <li>
       <a href='../Pedidos/GabineteInformatica.php'>".$lang_GabineteInformatica."</a>
+      <a href='../Utilizadores/GabineteInformatica.php'>".$lang_GabineteInformatica."</a>
     </li>
     <li class='Bandeiras-menu'>
         <img src='../Imgs/pt_pt.png'>
