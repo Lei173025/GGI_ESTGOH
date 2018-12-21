@@ -8,7 +8,7 @@ private $user_tipo;
 private $user_gestor;
 private $user_estado;
 
-public function __construct(int $id,String $nome,String $email,int $tipo,boolean $gestor,boolean $estado){
+public function __construct(int $id,String $nome,String $email,int $tipo,bool $gestor,bool $estado){
   $this->user_id = $id;
   $this->user_nome = $nome;
   $this->user_email = $email;
@@ -48,21 +48,21 @@ public function getUser_tipo(): int{
 public function setUser_tipo(int $user_tipo): void{
   $this->user_tipo = $user_tipo;
 }
-public function getUser_gestor(): boolean{
+public function getUser_gestor(): bool{
   return $this->user_gestor;
 }
-public function setUser_gestor(boolean $user_gestor): void{
+public function setUser_gestor(bool $user_gestor): void{
   $this->user_gestor = $user_gestor;
 }
-public function getUser_estado(): boolean{
+public function getUser_estado(): bool{
   return $this->user_estado;
 }
-public function setUser_estado(boolean $user_estado): void{
+public function setUser_estado(bool $user_estado): void{
   $this->user_estado = $user_estado;
 }
 public function toString(): String{
-  return "Id: " + $this->user_id + " Nome: " +  $this->user_nome + " Email: " +  $this->user_email + " Imagem: " +  $this->user_imagem +
-  " Tipo: " +  $this->user_tipo + " Gestor: " +  $this->user_gestor + " Estado: " +  $this->user_estado;  
+  return "Id: " . $this->user_id . " Nome: " .  $this->user_nome . " Email: " .  $this->user_email . " Imagem: " .  $this->user_imagem .
+  " Tipo: " .  $this->user_tipo . " Gestor: " .  $this->user_gestor . " Estado: " .  $this->user_estado;
 }
 }
 
