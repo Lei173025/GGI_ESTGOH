@@ -3,7 +3,10 @@ session_start();
 class GereUtilizadores{
   private $acesso_base_dados;
 
-
+  /*
+  * Construtor da classe Gere_Utilizadores, cria um objeto Gere_Utilizadores com uma ligaçõa à base de dados local
+  *
+  */
   public function __construct($DBH){
     $this->acesso_base_dados = $DBH;
   }
@@ -85,13 +88,6 @@ class GereUtilizadores{
     unset($_SESSION['USER_ESTADO']);
   }
   /*
-  * Construtor da classe Gere_Utilizadores, cria um objeto Gere_Utilizadores com uma ligaçõa à base de dados local
-  *
-  */
-  public function __construct($DBH){
-    $this->acesso_base_dados = $DBH;
-  }
-  /*
   * Método que insere o objeto Utilizador recebido na base de dados local, caso tenha verificado que não existe esse utilizador na base de dados
   * Devolve 1 se inserido com Sucesso, 0 com Insucesso
   */
@@ -118,11 +114,11 @@ class GereUtilizadores{
     $STH = $this->acesso_base_dados->prepare("SELECT * FROM USERS WHERE USER_ESTADO = 'TRUE'");
     $STH->execute();
     $STH->setFetchMode(PDO::FETCH_ASSOC);
-    $this->utilizadores = array();
+    $utilizadores = array();
     while($row = $STH->fetch()){
       array_push($this->utilizadores,new Utilizador($row["USER_NOME"],$row["USER_EMAIL"],$row["USER_IMAGEM"],$row["USER_TIPO"],$row["USER_GESTOR"],$row["USER_ESTADO"]));
     }
-    return $this->utilizadores;
+    return $utilizadores;
   }
 
   public function insere_user(Utilizador $user): int{
