@@ -16,7 +16,7 @@ class GereUtilizadores{
   * Devolve o utilizador caso a autenticação seja efetuada com sucesso, caso contrário devolve null
   */
   public function autenticacao($email, $password){
-    
+
     $array_email=explode("@",$email);
     $username=$array_email[0];
 
