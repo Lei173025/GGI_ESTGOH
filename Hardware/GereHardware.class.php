@@ -1,5 +1,5 @@
 <?php
-class Pedido{
+class GereHardware{
   private $acesso_base_dados;
 
   public function __construct($DBH){
