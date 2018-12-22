@@ -3,7 +3,7 @@ session_start();
 class GereUtilizadores{
   private $utilizadores;
   private $acesso_base_dados;
-<<<<<<< HEAD
+
 
   public function __construct($DBH){
     $this->acesso_base_dados = $DBH;
@@ -84,7 +84,7 @@ class GereUtilizadores{
     unset($_SESSION['USER_TIPO']);
     unset($_SESSION['USER_GESTOR']);
     unset($_SESSION['USER_ESTADO']);
-=======
+  }
 /*
 * Construtor da classe Gere_Utilizadores, cria um objeto Gere_Utilizadores com uma ligaçõa à base de dados local
 *
@@ -126,7 +126,7 @@ public function listar_users(){
   $this->utilizadores = array();
   while($row = $STH->fetch()){
     array_push($this->utilizadores,new Utilizador($row["USER_NOME"],$row["USER_EMAIL"],$row["USER_IMAGEM"],$row["USER_TIPO"],$row["USER_GESTOR"],$row["USER_ESTADO"]));
->>>>>>> cfb215324eeb54aa6ee35749c70fa03c2bd8a438
+
   }
 
   public function insere_user(Utilizador $user): int{
