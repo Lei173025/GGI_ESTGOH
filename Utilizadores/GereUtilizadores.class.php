@@ -2,20 +2,40 @@
 class GereUtilizadores{
   private $utilizadores;
   private $acesso_base_dados;
-
+/*
+* Construtor da classe Gere_Utilizadores, cria um objeto Gere_Utilizadores com uma ligaçõa à base de dados local
+*
+*/
 public function __construct($DBH){
    $this->acesso_base_dados = $DBH;
 }
-
+/*
+* Método que insere o objeto Utilizador recebido na base de dados local, caso tenha verificado que não existe esse utilizador na base de dados
+* Devolve 1 se inserido com Sucesso, 0 com Insucesso
+*/
 public function insere_user(Utilizador $user): int{
-  $STH = $this->DBH->prepare("INSERT INTO UTILIZADOR(USER_NOME,USER_EMAIL,USER_IMAGEM,USER_TIPO,USER_GESTOR,USER_ESTADO) values(?,?,?,?,?,?)");
-  if(!$STH->execute(array($user->getUser_nome(),$user->getUser_email(),$user->getUser_imagem(),$user->getUser_tipo(),$user->getUser_gestor(),$user->getUser_estado()))){
-    return 0;
-    exit;
+  $CheckUserSTH = $this->DBH-prepare("SELECT COUNT(*) FROM USERS WHERE USER_EMAIL = ?");
+  $CheckUserSTH->bindParam(1,$user->getUser_email());
+  $CheckUserSTH->execute();
+  $CheckUserSTH->setFetchMode(PDO::FETCH_ASSOC);
+  while($row = $CheckUserSTH->fetch()){
+    if($row["COUNT(*)"] == 0){
+      $STH = $this->DBH->prepare("INSERT INTO UTILIZADOR(USER_NOME,USER_EMAIL,USER_IMAGEM,USER_TIPO,USER_GESTOR,USER_ESTADO) values(?,?,?,?,?,?)");
+      if(!$STH->execute(array($user->getUser_nome(),$user->getUser_email(),$user->getUser_imagem(),$user->getUser_tipo(),$user->getUser_gestor(),$user->getUser_estado()))){
+        return 1;
+        exit;
+      }
+    }else {
+        return 0;
+    }
   }
-  return 1;
 }
-
+/*
+* Método que obtém a lista de todos os utilizadores ativos na base de dados local
+*
+* Devolve a lista de utilizadores ativos em forma de array
+*
+*/
 public function listar_users(){
   $STH = $this->DBH->prepare("SELECT * FROM USERS WHERE USER_ESTADO = 'TRUE'");
   $STH->execute();
