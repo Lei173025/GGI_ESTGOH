@@ -1,5 +1,20 @@
 
-<!doctype html>
+<?php
+set_include_path('Utilizadores/Utilizador.class.php');
+set_include_path('Utilizadores/GereUtilizador.class.php');
+
+if(isset($_POST["But"])){
+  $gu=new GereUtl($DBH);
+  if($gu->get_user($_POST["email"],$_POST["password"])!=null){
+
+  }else{
+    alert("notificacao erro"); //Inserir notificacao de erro
+  }
+
+}
+
+ ?>
+
 <html lang="pt">
   <head>
     <meta charset="utf-8">
@@ -44,7 +59,7 @@
       </nav>
     </header>
 
-    <form class="form-signin" method="GET">
+      <form method="POST" action="Index.php" class="form-signin">
       <img src="Imgs/LogoTransparente.png" width="100" height="100" class="d-inline-block align-top" alt="">
       <h1 class="h3 mb-3 font-weight-normal"> <?php print($lang_GestorGabineteInformatica);?></h1>
       <br>
@@ -54,7 +69,7 @@
       <label for="inputPassword" class="sr-only"> <?php print($lang_Password);?></label>
       <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
       <br>
-      <button class="btn btn-lg btn btn-primary btn-block " type="submit"> <?php print($lang_Entrar);?></button>
+      <input name="But" type=submit class="btn btn-lg btn btn-primary btn-block " value=" <?php print($lang_Entrar);?>">
       <br>
 
 
@@ -90,8 +105,3 @@
 
   </body>
 </html>
-
-<?php
-
-
- ?>
