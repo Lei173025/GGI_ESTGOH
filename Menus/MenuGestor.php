@@ -1,7 +1,7 @@
 <?php
 
 
-$menuGestor="<div id='wrapper' class='toggled'>
+$menuGestor="
 
   <!-- Menu lateral -->
   <div id='sidebar-wrapper'>
@@ -87,6 +87,5 @@ $menuGestor="<div id='wrapper' class='toggled'>
         <img src='../Imgs/en_uk.png'>
       </li>
     </ul>
-  </div>
   </div>";
 ?>
