@@ -66,7 +66,7 @@ set_include_path('../Menus/MenuGestor.php');
   <!-- Página Inicial -->
   <div class="jumbotron jumbotron-fluid">
     <div class="container ">
-      <h1 class="display-4"><?php print($lang_BemVindo." ".$_SESSION["$user_nome"])?></h1>
+      <h1 class="display-4"><?php print($lang_BemVindo." ". $_SESSION['USER_NOME'])?></h1>
       <p class="lead"><?php print($lang_Estaeanossapaginaprincipal)?> </p>
     </div>
   </div>
