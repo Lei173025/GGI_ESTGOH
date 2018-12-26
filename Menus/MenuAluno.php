@@ -1,6 +1,6 @@
 <?php
 
-$menuAluno="<div id='wrapper' class='toggled'>
+print="
 <div id='sidebar-wrapper'>
   <ul class='sidebar-nav'>
     <li class='detalhes-usr'>
@@ -52,7 +52,6 @@ $menuAluno="<div id='wrapper' class='toggled'>
       <img src='../Imgs/en_uk.png'>
     </li>
   </ul>
-</div>
 </div>";
 
 ?>
